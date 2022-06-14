@@ -31,13 +31,6 @@ $data = $update->callback_query->data;
 $from_id = $message->from->id;
 $name = $update->message->from->first_name;
 $from_id = $message->from->id;
-$join = bot('getChatMember', ["chat_id" => "@ssa_15", "user_id" => $from_id])->result->status;
-
-if ($message && $join == 'left')
-  {
-  bot('sendMessage', ['chat_id' => $chat_id, 'text' => "- عليك الاشتراك في القناة ليتم تشغيل البوت .'🚫", 'reply_markup' => json_encode(['inline_keyboard' => [[['text' => '• اشترك -🔱 ', 'url' => 'https://t.me/c3d3d']]]]) ]);
-  die('مشيولي');
-  }
 
 $ex = explode(' ', $text);
 
