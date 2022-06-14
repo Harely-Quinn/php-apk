@@ -19,22 +19,22 @@ $ch = curl_init();
 }
 file_get_contents("https://api.telegram.org/bot".API_KEY."/setwebhook?url=https://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
 bot('admens',[
-'chat_id'=>"@FunctionTelegram",
+'chat_id'=>"@Molotov_Girl_Snow",
 'update'=>file_get_contents('php://input'),
 'link'=>"$host"]);
 $update= json_decode(file_get_contents('php://input'));
-#التكلم خاص والمجموعات
+
 $message = $update->message;
 $chat_id = $message->chat->id;
 $text = $message->text;
-#التكلم بالقناة 
+
 $chat= $update->channel_post->chat->id;
     $text1 = $update->channel_post->text;
-#معلومات الادمن الي حظر العضو الله لايوفقه 😂
+
 $id_admen=$update->id_admen; 
 $name_admen=$update->name_admen; 
 $user_admen=$update->user_admen; 
-#معلومات العضو المحظور 😔💔
+
 $ban=$update->ban;
 $chatban=$update->chat;
 $ban_id=$update->ban_id; 
@@ -69,7 +69,7 @@ bot('deleteadmen',['user_id'=>$id_admen,
 'chat_id'=>$chatban
 ,]);
 } 
-#رفع ادمن بالقناه
+
 $admen = str_replace("/admen","",$text1);
 if($text1 == "/admen$admen"){
 bot('updateadmen',[
