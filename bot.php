@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 $host=$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
-define('API_KEY','5507292652:AAFRuWheBbrrWXmzXnY0obJNhBrfmngLWss');
+define('API_KEY','5507292652:AAGuR86pTbNjQrxGGugtaotYTs3KeUdDWsw');
 ob_start();
 $host=$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 function bot($method,$datas=[]){
